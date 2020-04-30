@@ -1,6 +1,7 @@
 const fs = require("fs");
 const CDP = require("chrome-remote-interface");
 const http = require("http");
+const path = require("path");
 
 let app = http.createServer((_, res) => {
   res.writeHead(200, {
@@ -23,7 +24,7 @@ async function download(downloadBehavior, url) {
     const { Page, Browser } = client;
     await Browser.setDownloadBehavior({
       behavior: downloadBehavior,
-      downloadPath: downloadDir,
+      downloadPath: path.join(process.cwd(), downloadDir),
     });
     await Page.enable();
 
