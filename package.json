@@ -1,0 +1,14 @@
+{
+  "name": "download-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "chrome-remote-interface": "^0.28.2",
+    "playwright": "^0.15.0"
+  }
+}
